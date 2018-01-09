@@ -6,7 +6,9 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class VoyagerSeeder extends TestCase
+use vilbur\VoyagerSeeder\Seeds\VoyagerSeeder;
+
+class VoyagerSeederTest extends TestCase
 {
 	use RefreshDatabase;
 
@@ -15,9 +17,16 @@ class VoyagerSeeder extends TestCase
      *
      * @return void
      */
-    public function testVoyagerSeeder(){
+    //public function testVoyagerSeeder(){
 
-		$this->assertTrue(true);
-
-    }
+		//$this->assertTrue(true);
+    //}
+	/**
+	*/
+	public function test_exist_some_models_for_seeding()
+	{
+		$VoyagerSeeder = new VoyagerSeeder;
+		$VoyagerSeeder->setModels();
+		$this ->assertEquals(gettype($VoyagerSeeder->models) , 'array');
+	}
 }

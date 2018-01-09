@@ -26,8 +26,10 @@ class VoyagerSeederServiceProvider extends ServiceProvider
         $this->app->bind('VoyagerSeeder', function(){
             return new \vilbur\VoyagerSeeder\VoyagerSeeder;
         });
-        $this->mergeConfigFrom( __DIR__.'/../Config/VoyagerSeeder.php', 'VoyagerSeeder');
-        $this->loadViewsFrom(__DIR__ . '/../Views', 'VoyagerSeeder');
+        $this->mergeConfigFrom(	__DIR__.'/../Config/VoyagerSeeder.php', 'VoyagerSeeder');
+        $this->loadViewsFrom(	__DIR__ . '/../Views', 'VoyagerSeeder');
+        $this->loadMigrationsFrom(	__DIR__ . '/../Migrations', 'VoyagerSeeder');
+        //$this->loadSeedsFrom(	__DIR__ . '/../Seeds', 'VoyagerSeeder');
 
     }
 

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Komodo Project File - DO NOT EDIT -->
 <project id="bf31e542-9a53-410b-a6ca-a5bc1be3cd47" kpf_version="5" name="pack-VoyagerSeeder.komodoproject">
+<livefolder id="69f45de2-7e96-4d3b-8073-41f1e33798e3" idref="bf31e542-9a53-410b-a6ca-a5bc1be3cd47" name="tests" url="tests/">
+</livefolder>
 <preference-set idref="bf31e542-9a53-410b-a6ca-a5bc1be3cd47" id="project" preftype="project">
   <long id="prefs_version">1</long>
+<preference-set id="testPlans">
+<preference-set id="pack-VoyagerSeeder - test plan # 1">
+  <string id="command_line"></string>
+  <string relative="url" id="directory">tests/</string>
+  <string id="language">PHP - PHPUnit</string>
+</preference-set>
+<preference-set id="pack-VoyagerSeeder - test plan # 2">
+  <string id="command_line"></string>
+  <string id="directory">file:///C:/wamp64/www/laravel-fresh/tests/Unit/</string>
+  <string id="language">PHP - PHPUnit</string>
+</preference-set>
+</preference-set>
 </preference-set>
 </project>

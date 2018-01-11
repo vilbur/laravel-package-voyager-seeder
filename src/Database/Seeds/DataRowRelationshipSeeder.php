@@ -26,7 +26,7 @@ class DataRowRelationshipSeeder
 	 */
 	public function seed()
 	{
-		foreach($this->foreign_keys as $foreign_key);
+		foreach($this->foreign_keys as $foreign_key)
 			$this->createDataRowsForForeignKey($foreign_key);
 	}
 	/**

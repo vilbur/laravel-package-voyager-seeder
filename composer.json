@@ -28,7 +28,7 @@
     "extra": {
 		"laravel": {
             "providers": [
-                "vilbur\\VoyagerSeeder\\Providers\\VoyagerSeederProvider"
+                "vilbur\\VoyagerSeeder\\Providers\\VoyagerSeederServiceProvider"
             ]
         },
         "branch-alias": {

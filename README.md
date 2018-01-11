@@ -1,47 +1,26 @@
-# Laravel Template Package
-Template for development of packages for Laravel.
 
+# Voyager Seeder
+Seed your models to [Voyager](https://laravelvoyager.com/) tables.<br>
+Create BREADS & permissions for admin.
+
+### Seed model to tables:
+ - data_types
+ - data_rows
+ - permissions
+ 
 ## Install
-Download repository to laravel\packages\{vendor}\{PackageName}<br>
-Search for "VoyagerSeeder" & replace with "PackageName" in files & file`s contents<br>
-Add provider to app.php for package development<br>
-Add alias to app.php for package development<br>
-Add "psr-4" path to composer.json<br>
+Laravel 5.5
 
-## Download
-
-Create folder laravel\packages\vilbur\YourPackageName
-
-``` bash
-cd \packages\<vendor>\YourPackageName
-git init
-git remote add origin https://github.com/vilbur/laravel-template-package.git
-git pull origin master
-```
-
-## Add to Laravel config\app.php
+## Add to Database\Seeds\DatabaseSeeder.php
 
 ``` php
-'providers' => [
-	vilbur\VoyagerSeeder\Providers\VoyagerSeederServiceProvider::class,
-],
-'providers' => [
-	'VoyagerSeeder' => vilbur\VoyagerSeeder\Facade\VoyagerSeeder::class,
-],
+    public function run()
+    {
+        $this->call(VoyagerSeeder::class);
+    }
+   ```
+## Publish config files
 
-```
-## Add to composer.json
-
-``` json
-    "autoload": {
-        "psr-4": {
-            "vilbur\\VoyagerSeeder\\": "packages/vilbur/VoyagerSeeder/src",
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "vilbur\\VoyagerSeeder\\": "packages/vilbur/VoyagerSeeder/src",
-        }
-    },
-
+``` bash
+php artisan vendor:publish
 ```

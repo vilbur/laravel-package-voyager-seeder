@@ -12,8 +12,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		$this->loadRoutesFrom(	__DIR__.'/../routes/routes.php');
-		$this->publishes([	__DIR__.'/../Config/VoyagerSeeder.php' => config_path('VoyagerSeeder.php'),], 'config');
+		$this->publishes([	__DIR__.'/../../publish/Config' => config_path('Voyager'),], 'config');
     }
 
     /**
@@ -26,10 +25,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
         $this->app->bind('VoyagerSeeder', function(){
             return new \vilbur\VoyagerSeeder\VoyagerSeeder;
         });
-        $this->mergeConfigFrom(	__DIR__.'/../Config/VoyagerSeeder.php', 'VoyagerSeeder');
-        $this->loadViewsFrom(	__DIR__ . '/../Views', 'VoyagerSeeder');
-        $this->loadMigrationsFrom(	__DIR__ . '/../Migrations', 'VoyagerSeeder');
-        //$this->loadSeedsFrom(	__DIR__ . '/../Seeds', 'VoyagerSeeder');
+        $this->loadMigrationsFrom(	__DIR__.'/../Migrations', 'VoyagerSeeder');
 
     }
 

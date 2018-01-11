@@ -1,6 +1,4 @@
-<?php
-
-namespace App;
+<?php namespace vilbur\VoyagerSeeder\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,6 +21,7 @@ class DataType extends Model{
 		'generate_permissions'	=> 1,
 		'server_side'	=> 0,
 	];
+
 
 	/** Fill $this->attributes if method for field exists
 	*/
@@ -49,7 +48,7 @@ class DataType extends Model{
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function dataRows(){
-        return $this->hasMany('App\DataRow');
+        return $this->hasMany('\vilbur\VoyagerSeeder\Models\DataRow');
     }
 	/*
 	|--------------------------------------------------------------------------

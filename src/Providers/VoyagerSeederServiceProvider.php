@@ -23,7 +23,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
     public function register(){
 		$this->app->bind('VoyagerSeeder', function(){
 			return new \vilbur\VoyagerSeeder\Database\Seeds\VoyagerSeeder;
-		  });
+		});
 		$this->loadMigrationsFrom(__DIR__.'/../Migrations', 'VoyagerSeeder');
 
     }

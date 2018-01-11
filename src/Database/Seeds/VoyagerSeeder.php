@@ -23,6 +23,7 @@ class VoyagerSeeder extends Seeder
 		$this->setModels();
 		$this->seedDataRowsForColumns();
 		$this->seedDataRowsForRelationship();
+		$this->seedPermisions();
     }
 	/**
 	*/
@@ -39,6 +40,13 @@ class VoyagerSeeder extends Seeder
 		foreach($this->models as $model)
 			(new DataRowRelationshipSeeder($model))->seed();
 	}
+	/**
+	*/
+	public function seedPermisions()
+	{
+		dump('seedPermisions');
+	}
+
 	/** setModels
 	 */
 	public function setModels(){

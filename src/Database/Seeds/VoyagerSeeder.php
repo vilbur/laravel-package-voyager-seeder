@@ -2,6 +2,10 @@
 
 use Illuminate\Database\Seeder;
 use Symfony\Component\Finder\Finder;
+use vilbur\VoyagerSeeder\Models\DataType;
+use vilbur\VoyagerSeeder\Database\Seeds\DataRowColumnSeeder;
+use vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
+
 
 class VoyagerSeeder extends Seeder
 {
@@ -16,9 +20,9 @@ class VoyagerSeeder extends Seeder
      * @return void
      */
     public function run(){
-		dump('VoyagerSeeder');
-		//$this->seedDataRowsForColumns();
-		//$this->seedDataRowsForRelationship();
+		$this->setModels();
+		$this->seedDataRowsForColumns();
+		$this->seedDataRowsForRelationship();
     }
 	/**
 	*/
@@ -32,9 +36,8 @@ class VoyagerSeeder extends Seeder
 	*/
 	public function seedDataRowsForRelationship()
 	{
-		//foreach($this->models as $model)
-			//if(!$this->breadExists($model))
-				//(new DataRowColumnSeeder($model))->seed();
+		foreach($this->models as $model)
+			(new DataRowRelationshipSeeder($model))->seed();
 	}
 	/** setModels
 	 */
@@ -42,7 +45,7 @@ class VoyagerSeeder extends Seeder
 		$files = Finder::create()
 					->in(app_path())
 					->depth('== 0')
-					->notName('(DataType|DataRow|User)') // exclude voyager classes
+					->notName('User.php') // exclude voyager classes
 					->name('*.php');
 
 		foreach($files as $file)
@@ -52,7 +55,7 @@ class VoyagerSeeder extends Seeder
 	/** breadExists
 	 */
 	private function breadExists($model){
-		return \App\DataType::where('name', $model->getTable())->first();
+		return DataType::where('name', $model->getTable())->first();
 	}
 
 }

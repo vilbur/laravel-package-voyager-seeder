@@ -1,14 +1,9 @@
 <?php namespace vilbur\VoyagerSeeder\Database\Seeds;
 
 use Illuminate\Database\Eloquent\Model;
-//use Symfony\Component\Console\Output\ConsoleOutput;
 
 use TCG\Voyager\Models\Role;
 use TCG\Voyager\Models\Permission;
-//use vilbur\VoyagerSeeder\Models\DataRowColumn;
-//use vilbur\VoyagerSeeder\Models\DataRowForeign;
-//use vilbur\VoyagerSeeder\Models\DataRowRelated;
-
 
 class PermissionSeeder {
 

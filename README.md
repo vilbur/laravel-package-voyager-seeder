@@ -1,7 +1,7 @@
 
 # Voyager Seeder
 Seed your models to [Voyager](https://laravelvoyager.com/) tables.<br>
-Create BREADS & permissions for admin.
+Create BREADS & permissions for tables.
 
 ### Seed model to tables:
  - data_types

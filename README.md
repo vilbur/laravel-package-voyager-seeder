@@ -7,11 +7,11 @@ Create BREADS & permissions for admin.
  - data_types
  - data_rows
  - permissions
- 
+
 ## Install
 Laravel 5.5
 
-## Add to Database\Seeds\DatabaseSeeder.php
+#### Add to Database\Seeds\DatabaseSeeder.php
 
 ``` php
     public function run()
@@ -19,7 +19,7 @@ Laravel 5.5
         $this->call(VoyagerSeeder::class);
     }
    ```
-## Publish config files
+#### Publish config files
 
 ``` bash
 php artisan vendor:publish

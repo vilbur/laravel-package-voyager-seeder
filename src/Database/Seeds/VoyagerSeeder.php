@@ -4,8 +4,8 @@ use Illuminate\Database\Seeder;
 use Symfony\Component\Finder\Finder;
 use vilbur\VoyagerSeeder\Models\DataType;
 use vilbur\VoyagerSeeder\Database\Seeds\DataRowColumnSeeder;
+use vilbur\VoyagerSeeder\Database\Seeds\PermisionSeeder;
 use vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
-
 
 class VoyagerSeeder extends Seeder
 {
@@ -23,6 +23,7 @@ class VoyagerSeeder extends Seeder
 		$this->setModels();
 		$this->seedDataRowsForColumns();
 		$this->seedDataRowsForRelationship();
+		$this->seedPermisions();
     }
 	/**
 	*/
@@ -39,6 +40,15 @@ class VoyagerSeeder extends Seeder
 		foreach($this->models as $model)
 			(new DataRowRelationshipSeeder($model))->seed();
 	}
+	/**
+	*/
+	public function seedPermisions()
+	{
+		foreach($this->models as $model)
+			if($this->breadExists($model))
+				(new PermissionSeeder($model))->seed();
+	}
+
 	/** setModels
 	 */
 	public function setModels(){

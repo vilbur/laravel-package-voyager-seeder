@@ -1,12 +1,12 @@
 {
-    "name": "vilbur/laravel-template-package",
+    "name": "vilbur/voyager-seeder",
     "type": "library",
-    "description": "Template for development of packages for Laravel",
+    "description": "Seed tables of Laravel Voyager for models",
     "keywords": [
         "vilbur",
-        "TestPackage"
+        "VoyagerSeeder"
     ],
-    "homepage": "https://github.com/vilbur/laravel-template-package",
+    "homepage": "https://github.com/vilbur/voyager-seeder",
     "license": "MIT",
     "authors": [
         {

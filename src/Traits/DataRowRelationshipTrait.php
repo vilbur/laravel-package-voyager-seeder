@@ -1,6 +1,5 @@
 <?php namespace vilbur\VoyagerSeeder\Traits;
 
-//use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
@@ -10,11 +9,6 @@ trait DataRowRelationshipTrait{
     /**
      */
 	protected $foreign_key;
-    /**
-     */
-	public function __construct(){
-		$this->type	= 'relationship';
-	}
 	/**
 	*/
 	public function setForeignKey($foreign_key)
@@ -38,6 +32,7 @@ trait DataRowRelationshipTrait{
 		$this->setFieldforRelationship();
 		$this->setDisplayName();
 		$this->fillWithConfig('Voyager.'.$this->getModelName().'.'.$this->getRelatedModelName());
+		$this->type	= 'relationship';
 		$this->convertDetailsToJson();
 		//dump($this->getAttributes());
 	}

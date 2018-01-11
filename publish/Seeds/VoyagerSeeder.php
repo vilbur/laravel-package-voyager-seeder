@@ -1,8 +1,8 @@
-<?php namespace vilbur\VoyagerSeeder\Seeds;
+<?php
 
 use Illuminate\Database\Seeder;
 use Symfony\Component\Finder\Finder;
-namespace vilbur\VoyagerSeeder\Seeds\DataRowColumnSeeder;
+use vilbur\VoyagerSeeder\Seeds\DataRowColumnSeeder;
 
 class VoyagerSeeder extends Seeder
 {

@@ -1,7 +1,7 @@
 {
     "name": "vilbur/voyager-seeder",
     "type": "library",
-    "description": "Seed tables of Laravel Voyager for models.",
+    "description": "Seed tables of Laravel Voyager for models...",
     "keywords": [
         "vilbur",
         "VoyagerSeeder"

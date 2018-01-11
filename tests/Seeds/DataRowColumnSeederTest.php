@@ -6,7 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-use vilbur\VoyagerSeeder\Seeds\DataRowColumnSeeder;
+use vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
 use App\Voyagertest;
 use App\VoyagertestRelated;
 

@@ -1,4 +1,4 @@
-<?php namespace vilbur\VoyagerSeeder\Facade;
+<?php namespace Vilbur\VoyagerSeeder\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,34 +1,34 @@
 {
-    "name": "vilbur/voyager-seeder",
+    "name": "Vilbur/voyager-seeder",
     "type": "library",
     "description": "Seed tables of Laravel Voyager for models.",
     "keywords": [
-        "vilbur",
+        "Vilbur",
         "VoyagerSeeder"
     ],
-    "homepage": "https://github.com/vilbur/voyager-seeder",
+    "homepage": "https://github.com/Vilbur/voyager-seeder",
     "license": "MIT",
     "authors": [
         {
-            "name": ":vilbur",
+            "name": ":Vilbur",
             "email": "cerny.vil@gmail.com",
             "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "vilbur\\VoyagerSeeder\\": "src"
+            "Vilbur\\VoyagerSeeder\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "vilbur\\VoyagerSeeder\\": "tests"
+            "Vilbur\\VoyagerSeeder\\": "tests"
         }
     },
     "extra": {
 		"laravel": {
             "providers": [
-                "vilbur\\VoyagerSeeder\\Providers\\VoyagerSeederServiceProvider"
+                "Vilbur\\VoyagerSeeder\\Providers\\VoyagerSeederServiceProvider"
             ]
         },
         "branch-alias": {

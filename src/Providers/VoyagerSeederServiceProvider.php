@@ -1,4 +1,4 @@
-<?php namespace vilbur\VoyagerSeeder\Providers;
+<?php namespace Vilbur\VoyagerSeeder\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

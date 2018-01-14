@@ -3,7 +3,7 @@
 Seed your models to [Voyager](https://laravelvoyager.com/) tables.<br>
 Create BREADS & permissions for tables.
 
-### Seed model to tables:
+### Seed to tables:
  - data_types
  - data_rows
  - permissions

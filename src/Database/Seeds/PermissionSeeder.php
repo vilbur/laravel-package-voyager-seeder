@@ -1,4 +1,4 @@
-<?php namespace vilbur\VoyagerSeeder\Database\Seeds;
+<?php namespace Vilbur\VoyagerSeeder\Database\Seeds;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,4 +1,4 @@
-<?php namespace vilbur\VoyagerSeeder\Traits;
+<?php namespace Vilbur\VoyagerSeeder\Traits;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
 

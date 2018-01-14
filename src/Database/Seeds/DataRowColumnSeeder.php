@@ -3,10 +3,10 @@
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-use vilbur\VoyagerSeeder\Models\DataType;
-use vilbur\VoyagerSeeder\Models\DataRowColumn;
-//use vilbur\VoyagerSeeder\Models\DataRowForeign;
-//use vilbur\VoyagerSeeder\Models\DataRowRelated;
+use Vilbur\VoyagerSeeder\Models\DataType;
+use Vilbur\VoyagerSeeder\Models\DataRowColumn;
+//use Vilbur\VoyagerSeeder\Models\DataRowForeign;
+//use Vilbur\VoyagerSeeder\Models\DataRowRelated;
 
 
 class DataRowColumnSeeder {

@@ -4,8 +4,8 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-use vilbur\VoyagerSeeder\Models\DataRow;
-use vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
+use Vilbur\VoyagerSeeder\Models\DataRow;
+use Vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
 use App\VoyagertestRelated;
 
 

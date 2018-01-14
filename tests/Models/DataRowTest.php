@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 use App\Voyagertest;
 use App\VoyagertestRelated;
-use vilbur\VoyagerSeeder\Models\DataRowColumn;
+use Vilbur\VoyagerSeeder\Models\DataRowColumn;
 
 class DataRowTest extends TestCase
 {

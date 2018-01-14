@@ -6,8 +6,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 use App\Voyagertest;
 use App\VoyagertestRelated;
-use vilbur\VoyagerSeeder\Models\DataRow;
-use vilbur\VoyagerSeeder\Models\DataRowForeign;
+use Vilbur\VoyagerSeeder\Models\DataRow;
+use Vilbur\VoyagerSeeder\Models\DataRowForeign;
 
 class DataRowForeignTest extends TestCase
 {

@@ -26,5 +26,5 @@ __Database\Seeds\DatabaseSeeder.php__
 #### Publish config files
 
 ``` bash
-php artisan vendor:publish
+php artisan vendor:publish --tag="voyager-seeder"
 ```

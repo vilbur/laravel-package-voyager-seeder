@@ -48,18 +48,45 @@ class VoyagerSeeder extends Seeder
 			if($this->breadExists($model))
 				(new PermissionSeeder($model))->seed();
 	}
-
 	/** setModels
 	 */
 	public function setModels(){
+
 		$files = Finder::create()
-					->in(app_path())
+					->in( $this->getPathsToModelsFromConfig() )
 					->depth('== 0')
-					->notName('User.php') // exclude voyager classes
 					->name('*.php');
 
 		foreach($files as $file)
-			$this->models[] = app(preg_replace('/(.*)\.php/', '\App\\\$1', $file->getFilename()));
+			$this->models[] = app($this->getNamespace( $file->getRealpath()));
+	}
+	/**
+	*/
+	public function getPathsToModelsFromConfig()
+	{
+		return array_filter(\Config::get('voyager.voyager-seeder.paths.models'), function($path) {
+					if( file_exists($path) && ! $this->isDirEmpty($path) )
+						return $path;
+				});
+	}
+	/**
+	*/
+	public function isDirEmpty($dir_path)
+	{
+		if (!is_readable($dir_path)) return false;
+		return (count(scandir($dir_path)) == 2);
+	}
+
+	/** Get namespace from file
+	 */
+	public function getNamespace($path) {
+		$lines	= file($path);
+		$replaced	= preg_grep('/namespace /', $lines);
+		$namespaceLine	= array_shift($replaced);
+		$match	= [];
+		preg_match('/namespace (.*);[\r\n$]/', $namespaceLine, $match);
+		$namespace = array_pop($match);
+		return $namespace .'\\'.  pathinfo($path, PATHINFO_FILENAME );
 	}
 
 	/** breadExists

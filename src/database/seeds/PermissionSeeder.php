@@ -8,7 +8,7 @@ use TCG\Voyager\Models\Permission;
 class PermissionSeeder {
 
 	/**
-     */
+    */
 	private $model;
 
 	/**

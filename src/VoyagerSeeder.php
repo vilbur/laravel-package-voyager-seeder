@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Symfony\Component\Finder\Finder;
 use Vilbur\VoyagerSeeder\Models\DataType;
 use Vilbur\VoyagerSeeder\Database\Seeds\DataRowColumnSeeder;
-use Vilbur\VoyagerSeeder\Database\Seeds\PermisionSeeder;
+use Vilbur\VoyagerSeeder\Database\Seeds\PermissionSeeder;
 use Vilbur\VoyagerSeeder\Database\Seeds\DataRowRelationshipSeeder;
 
 class VoyagerSeeder extends Seeder

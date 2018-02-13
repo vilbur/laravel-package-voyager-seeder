@@ -11,7 +11,11 @@ Create BREADS & permissions for tables.
 ## Install
 Laravel 5.5
 
-#### Add to Database\Seeds\DatabaseSeeder.php
+``` bash
+php artisan vendor:publish
+```
+#### Add to seeder
+__Database\Seeds\DatabaseSeeder.php__
 
 ``` php
     public function run()

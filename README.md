@@ -12,7 +12,7 @@ Create BREADS & permissions for tables.
 Laravel 5.5
 
 ``` bash
-php artisan vendor:publish
+composer require vilbur/voyager-seeder
 ```
 #### Add to seeder
 __Database\Seeds\DatabaseSeeder.php__

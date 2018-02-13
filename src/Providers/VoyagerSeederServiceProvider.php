@@ -12,7 +12,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		$this->publishes([	__DIR__.'/../../publish/Config'	=> config_path('Voyager'),], 'config');
+		$this->publishes([	__DIR__.'/../../publish/Config'	=> config_path('Voyager'),], 'VoyagerSeeder');
     }
 
     /**

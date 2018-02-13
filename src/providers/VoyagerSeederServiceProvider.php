@@ -13,7 +13,9 @@ class VoyagerSeederServiceProvider extends ServiceProvider
     public function boot()
     {
 		/* PUBLISH */
-		$this->publishes([	__DIR__.'/../../publish/config'	=> config_path(),], 'voyager-seeder');
+		$this->publishes([
+			__DIR__.'/../../publish/config'	=> config_path(),
+		], 'voyager-seeder');
     }
 
     /**
@@ -22,6 +24,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
      * @return void
      */
     public function register(){
+		
 		$this->app->bind('VoyagerSeeder', function(){
 			return new \Vilbur\VoyagerSeeder\VoyagerSeeder;
 		});

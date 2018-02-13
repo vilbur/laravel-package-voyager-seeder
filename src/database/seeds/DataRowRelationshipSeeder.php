@@ -6,6 +6,7 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 use Vilbur\VoyagerSeeder\Models\DataType;
 use Vilbur\VoyagerSeeder\Models\DataRowForeign;
 use Vilbur\VoyagerSeeder\Models\DataRowRelated;
+use Vilbur\VoyagerSeeder\Models\DataRow;
 
 /* Seed 'data_rows' for RELATIONSHIP columns
  *
@@ -36,14 +37,22 @@ class DataRowRelationshipSeeder
 	*/
 	private function createDataRowsForForeignKey($foreign_key)
 	{
+		$this->seedDataRowForeign($foreign_key);
+		$this->seedDataRowRelated($foreign_key);
+	}
+	/**
+	*/
+	private function seedDataRowForeign($foreign_key)
+	{
 		$DataRowForeign = $this->getDataRow(new DataRowForeign, $foreign_key);
-		//dump($DataRowForeign->getAttributes());
 		$this->saveDataRows($DataRowForeign, $this->model->getTable());
-
+	}
+	/**
+	*/
+	private function seedDataRowRelated($foreign_key)
+	{
 		$DataRowRelated = $this->getDataRow(new DataRowRelated, $foreign_key);
-		//dump($DataRowRelated->getAttributes());
 		$this->saveDataRows($DataRowRelated, $DataRowRelated->getRelatedTable());
-
 	}
 	/**
 	*/
@@ -56,7 +65,7 @@ class DataRowRelationshipSeeder
 	private function saveDataRows($DataRow, $related_table)
 	{
 		$DataType = $DataRow->hasRelationship() ? DataType::where('name', $related_table)->first() : null;
-		if($DataType)
+		if($DataType && ! DataRow::where('field', $DataRow->field)->first() )
 			$DataType->dataRows()->save($DataRow);
 	}
 

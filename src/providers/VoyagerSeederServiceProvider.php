@@ -13,7 +13,7 @@ class VoyagerSeederServiceProvider extends ServiceProvider
     public function boot()
     {
 		/* PUBLISH */
-		$this->publishes([	__DIR__.'/../../publish/config'	=> config_path(),], 'VoyagerSeeder');
+		$this->publishes([	__DIR__.'/../../publish/config'	=> config_path(),], 'voyager-seeder');
     }
 
     /**
@@ -27,10 +27,10 @@ class VoyagerSeederServiceProvider extends ServiceProvider
 		});
 
 		/* CONFIG */
-		$this->mergeConfigFrom(	__DIR__.'/../../publish/config/voyager/DataRow.php', 'VoyagerSeeder');
+		$this->mergeConfigFrom(	__DIR__.'/../../publish/config/voyager/DataRow.php', 'voyager-seeder');
 
 		/* MIGRATIONS */
-		$this->loadMigrationsFrom(__DIR__.'/../Migrations', 'VoyagerSeeder');
+		$this->loadMigrationsFrom(__DIR__.'/../Migrations', 'voyager-seeder');
 
     }
 

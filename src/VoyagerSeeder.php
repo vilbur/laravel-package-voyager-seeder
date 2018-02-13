@@ -1,4 +1,4 @@
-<?php namespace Vilbur\VoyagerSeeder\Database\Seeds;
+<?php namespace Vilbur\VoyagerSeeder;
 
 use Illuminate\Database\Seeder;
 use Symfony\Component\Finder\Finder;

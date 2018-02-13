@@ -10,10 +10,9 @@ class PermissionSeeder {
 	/**
      */
 	private $model;
+
 	/**
 	*/
-	//public $Permissions;
-
 	public function __construct(Model $model){
 		$this->model	= $model;
 	}
@@ -22,8 +21,11 @@ class PermissionSeeder {
 	public function seed()
 	{
 		$this->savePermissions();
-		if(!$this->getPermissions());
-			$this->adminRole()->permissions()->saveMany($this->getPermissions());
+
+		$permissions	= $this->getPermissions();
+
+		if($permissions->count() ==0 )
+			$this->adminRole()->permissions()->saveMany($permissions);
 	}
 	/**
 	*/
@@ -41,7 +43,7 @@ class PermissionSeeder {
 	*/
 	private function getPermissions()
 	{
-		return Permission::where('table_name',$this->model->getTable() )->get();
+		return Permission::where('table_name', $this->model->getTable() )->get();
 	}
 
 

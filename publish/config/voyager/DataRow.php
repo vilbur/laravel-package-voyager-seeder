@@ -54,11 +54,18 @@ return [
     |--------------------------------------------------------------------------
     |
     */
+	'slug' => [
+		'type'	=> 'hidden',
+	],
 	'title' => [
 		'display_name'	=> 'Title',
+	],
+	'description' => [
+		'type'	=> 'text_area',
 	],
 	'image' => [
 		'type'	=> 'image',
 	],
+
 
 ];

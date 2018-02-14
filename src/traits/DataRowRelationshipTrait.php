@@ -71,8 +71,7 @@ trait DataRowRelationshipTrait{
 
 		$this->setDetailAttribute('table',	$this->relationship->getRelated()->getTable());
 		$this->setDetailAttribute('model',	$this->getRelationshipModelNamespace());
-		//$this->setDetailAttribute('type',	camel_case($this->getRelationType())); // get E.G: 'BelongsTo' from '\Illuminate\Database\Eloquent\Relations\BelongsTo'
-		$this->setDetailAttribute('type',	"teswt"); // get E.G: 'BelongsTo' from '\Illuminate\Database\Eloquent\Relations\BelongsTo'
+		$this->setDetailAttribute('type',	camel_case($this->getRelationType())); // get E.G: 'BelongsTo' from '\Illuminate\Database\Eloquent\Relations\BelongsTo'
 
 		$this->setDetailAttribute('column',	$this->foreign_key->getLocalColumns()[0]);
 		$this->setDetailAttribute('key',	$this->foreign_key->getForeignColumns()[0]);

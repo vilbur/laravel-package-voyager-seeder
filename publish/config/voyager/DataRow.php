@@ -54,14 +54,22 @@ return [
     |--------------------------------------------------------------------------
     |
     */
+	'slug' => [
+		'type'	=> 'hidden',
+	],
 	'title' => [
 		'display_name'	=> 'Title',
 	],
 	'description' => [
+<<<<<<< HEAD
 		'type'	=> 'rich_text_box',
+=======
+		'type'	=> 'text_area',
+>>>>>>> master
 	],
 	'image' => [
 		'type'	=> 'image',
 	],
+
 
 ];

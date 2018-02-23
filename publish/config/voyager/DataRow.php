@@ -57,6 +57,9 @@ return [
 	'title' => [
 		'display_name'	=> 'Title',
 	],
+	'description' => [
+		'type'	=> 'rich_text_box',
+	],
 	'image' => [
 		'type'	=> 'image',
 	],

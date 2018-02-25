@@ -35,7 +35,9 @@ return [
 		'add'	=> 0,
 		'delete'	=> 0,
 	],
-
+	'slug' => [
+		'type'	=> 'hidden',
+	],
 	'created_at' => [
 		'add'	=> 0,
 	],

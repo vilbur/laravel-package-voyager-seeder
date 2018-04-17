@@ -29,7 +29,7 @@ return [
 	'id' => [
 		'type'	=> 'hidden',
 		'required'	=> 1,
-		'browse'	=> 0,
+		'browse'	=> 1,
 		'read'	=> 0,
 		'edit'	=> 0,
 		'add'	=> 0,

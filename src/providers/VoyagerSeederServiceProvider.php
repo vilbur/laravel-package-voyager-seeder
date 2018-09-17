@@ -13,10 +13,10 @@ class VoyagerSeederServiceProvider extends ServiceProvider
     public function boot()
     {
 		/* CONFIG */
-		$this->mergeConfigFrom(	__DIR__.'/../../publish/config/voyager/DataRow.php');
+		$this->mergeConfigFrom(	__DIR__.'/../../publish/config/voyager/DataRow.php', 'voyager-seeder');
 
 		/* MIGRATIONS */
-		$this->loadMigrationsFrom(__DIR__.'/../Migrations');
+		$this->loadMigrationsFrom(__DIR__.'/../Migrations', 'voyager-seeder');
 		
 		/* PUBLISH */
 		$this->publishes([
